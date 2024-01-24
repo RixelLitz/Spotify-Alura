@@ -8,8 +8,8 @@
       href="src/assets/images/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="src/reset.css" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
     <title>Spotify| Imersão alura</title>
   </head>
   <body>
@@ -33,27 +33,47 @@
         </ul>
       </nav>
       <div id="library">
-        <div id="library_links">
-          <a href=""
-            ><ion-icon name="library-outline"></ion-icon>Sua biblioteca</a
-          >
-          <a href=""><ion-icon name="add-circle-outline"></ion-icon></a>
+        <div id="library__content">
+          <button id="library__btn">
+            <a href=""
+              ><ion-icon name="library-outline"></ion-icon>Sua biblioteca</a
+            >
+          </button>
+          <span id="plus"
+            ><a href=""><ion-icon name="add-circle-outline"></ion-icon></a
+          ></span>
         </div>
-        <div id="playlist">
-          <span id="sidebar_span">Crie sua primeira playlist</span>
-          <p id="sidebar_p">É fácil, vamos te ajudar.</p>
-          <button id="sidebar_btn">Criar Playlist</button>
+        <section id="section__playlist">
+          <div id="section-playlist__content">
+            <span class="text title">Crie sua primeira Playlist</span>
+            <span class="text subtitle">É fácil, vamos te ajudar</span>
+            <button id="playlist__btn">
+              <a href="">Criar Playlist</a>
+            </button>
+          </div>
+        </section>
+        <div id="cookies">
+          <a href="">Cookies</a>
         </div>
-        <div id="podcast">
-          <span id="sidebar_span">Que tal seguir um podcast novo?</span>
-          <p id="sidebar_p">Avisaremos você sobre novos episódios.</p>
-          <button id="sidebar_btn">Explore Podcasts</button>
+        <div id="languages">
+          <button id="languages__btn">
+            <a href=""
+              ><ion-icon name="earth-outline"></ion-icon>Português do Brasil</a
+            >
+          </button>
         </div>
-        <button id="language_btn">
-          <ion-icon name="earth-outline"></ion-icon>Português do Brasil
-        </button>
       </div>
     </div>
+    <footer>
+      <div id="texts">
+        <h1>Testar o Premium de graça</h1>
+        <p>
+          Inscreva-se para curtir música ilimitada e podcasts só com alguns
+          anúncios. Não precisa de cartão de crédito.
+        </p>
+      </div>
+      <button><a href="">Inscreva-se grátis</a></button>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
