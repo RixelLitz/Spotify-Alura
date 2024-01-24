@@ -1,13 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
+  font-family: "DM Sans", sans-serif;
   background-color: black;
 }
+/*Header Style*/
+header {
+  width: 84.3%;
+  margin-left: 300px;
+  margin-right: 56px;
+}
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #121212;
+}
+#header-arrows {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#arrow-left {
+  margin-right: 1.25rem;
+}
+.arrow-left,
+.arrow-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#header-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 364px;
+  height: 48px;
+  margin-left: 8px;
+  background-color: #242424;
+  border-radius: 500px;
+  border: 1px solid transparent;
+}
+#header-search img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+#header-search input {
+  background: transparent;
+  border: none;
+  padding: 0 100px 0 12;
+  color: #fff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  outline: none;
+}
+
+#subscribe {
+  color: #a7a7a7;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  margin-right: 32px;
+  border: none;
+  cursor: pointer;
+}
+#login {
+  width: 100px;
+  height: 48px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+/*Estilo sidebar*/
 
 #sidebar {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 12px;
+  padding: 10px 10px;
   width: 300px;
 }
 
@@ -34,7 +122,6 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
 }
 #library {
   background-color: #121212;
@@ -46,6 +133,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   margin-top: 10px;
+  height: 100%;
 }
 #library__content {
   display: flex;
@@ -58,7 +146,6 @@ body {
   background-color: transparent;
   border: none;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
 }
 #library__btn a {
   display: flex;
@@ -88,7 +175,6 @@ body {
 }
 
 #section-playlist__content .text {
-  font-family: "DM Sans", sans-serif;
   padding-bottom: 14px;
   color: white;
 }
@@ -111,17 +197,19 @@ body {
   text-decoration: none;
   color: #000;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
 }
 #cookies {
   margin: 25px 20px;
 }
 #cookies a {
-  font-family: "DM Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 8px;
   text-decoration: none;
   color: #b3b3b3;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 10px;
 }
 #languages__btn {
   background-color: transparent;
@@ -141,6 +229,34 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+/*Estilo Main*/
+main {
+  background-color: #121212;
+  height: 88vh;
+  width: 83.7%;
+  margin-left: 310px;
+  margin-right: 56px;
+  border-radius: 8px;
+}
+#welcome-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#welcome-main h1 {
+  margin: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+#welcome-main h2 {
+  margin: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+/*Estilo Footer da pagina*/
 
 footer {
   display: flex;
@@ -153,17 +269,15 @@ footer {
   background: linear-gradient(to right, #ae2896, #509bf5);
 }
 footer h1 {
-  font-family: "DM Sans", sans-serif;
   color: white;
   font-weight: bold;
   margin: 8px;
 }
 footer p {
-  font-family: "DM Sans", sans-serif;
   color: white;
   margin: 8px;
 }
-footer button{
+footer button {
   display: flex;
   align-items: center;
   border: none;
@@ -171,7 +285,7 @@ footer button{
   border-radius: 20px;
   margin-right: 50px;
 }
-footer button a{
+footer button a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
