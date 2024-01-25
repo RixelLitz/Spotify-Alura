@@ -232,11 +232,12 @@ header {
 /*Estilo Main*/
 main {
   background-color: #121212;
-  height: 88vh;
+  height: calc(100vh - 116px);
   width: calc(100vw - 332px);
   margin-left: 310px;
   margin-right: 56px;
   border-radius: 8px;
+  overflow-y: hidden;
 }
 #welcome-main {
   display: flex;
@@ -255,7 +256,96 @@ main {
   font-weight: bold;
   color: white;
 }
-
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+#cards div {
+  width: 15rem;
+  height: 15rem;
+}
+#cards .card1 {
+  background-image: url(../assets/playlist/1.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card2 {
+  background-image: url(../assets/playlist/2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card3 {
+  background-image: url(../assets/playlist/3.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card4 {
+  background-image: url(../assets/playlist/4.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card5 {
+  background-image: url(../assets/playlist/5.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card6 {
+  background-image: url(../assets/playlist/6.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card7 {
+  background-image: url(../assets/playlist/7.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card8 {
+  background-image: url(../assets/playlist/8.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card9 {
+  background-image: url(../assets/playlist/9.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card10 {
+  background-image: url(../assets/playlist/10.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card11 {
+  background-image: url(../assets/playlist/11.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card12 {
+  background-image: url(../assets/playlist/12.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card13 {
+  background-image: url(../assets/playlist/13.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card14 {
+  background-image: url(../assets/playlist/14.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#cards .card15 {
+  background-image: url(../assets/playlist/15.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 300px;
+}
 /*Estilo Footer da pagina*/
 
 footer {
