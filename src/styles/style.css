@@ -9,9 +9,9 @@ body {
 }
 /*Header Style*/
 header {
-  width: 84.3%;
+  width: calc(100% - 315px);
   margin-left: 300px;
-  margin-right: 56px;
+  overflow-x: hidden;
 }
 #header-container {
   display: flex;
@@ -233,7 +233,7 @@ header {
 main {
   background-color: #121212;
   height: 88vh;
-  width: 83.7%;
+  width: calc(100vw - 332px);
   margin-left: 310px;
   margin-right: 56px;
   border-radius: 8px;
