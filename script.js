@@ -29,6 +29,6 @@ document.addEventListener("input", function () {
   }
   resultPlaylist.style.display = "none"
   resultsArtist.style.display = "flex"
-  
+
   requestApi(searchTerm)
 })
