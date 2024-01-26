@@ -451,11 +451,11 @@ main {
   position: relative;
 }
 
-.play .fa-play {
+.play .playicon {
   position: absolute;
   right: 10px;
-  top: 120px;
-  padding: 18px;
+  top: 50px;
+  padding: 5px;
   background-color: #1db954;
   border-radius: 100%;
   font-size: 14px;
@@ -463,13 +463,13 @@ main {
   transition: all ease 0.4s;
 }
 
-.artist-card:hover .play .fa-play {
+.artist-card:hover .play .playicon {
   opacity: 1;
   transform: translateY(-20px);
 }
 
-.play .fa-play:hover {
-  padding: 20px;
+.play .playicon:hover {
+  padding: 10px;
   cursor: pointer;
 }
 
