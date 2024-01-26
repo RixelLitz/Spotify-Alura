@@ -32,7 +32,7 @@
           <input
             type="text"
             name=""
-            id=""
+            id="search-input"
             placeholder="O que voce quer ouvir?"
             maxlength="800"
           />
@@ -118,22 +118,43 @@
         <h1>Boa tarde</h1>
         <h2>Navegar por todas seções</h2>
       </div>
-      <section id="cards">
-        <div class="card1"></div>
-        <div class="card2"></div>
-        <div class="card3"></div>
-        <div class="card4"></div>
-        <div class="card5"></div>
-        <div class="card6"></div>
-        <div class="card7"></div>
-        <div class="card8"></div>
-        <div class="card9"></div>
-        <div class="card10"></div>
-        <div class="card11"></div>
-        <div class="card12"></div>
-        <div class="card13"></div>
-        <div class="card14"></div>
-        <div class="card15"></div>
+      <section id="playlist-artists-container">
+        <div id="cards-container" class="hidden">
+          <a href="https://www.youtube.com" target="_blank"
+            ><div class="card1"></div
+          ></a>
+          <a href=""><div class="card2"></div></a>
+          <a href=""><div class="card3"></div></a>
+          <a href=""><div class="card4"></div></a>
+          <a href=""><div class="card5"></div></a>
+          <a href=""><div class="card6"></div></a>
+          <a href=""><div class="card7"></div></a>
+          <a href=""><div class="card8"></div></a>
+          <a href=""><div class="card9"></div></a>
+          <a href=""><div class="card10"></div></a>
+          <a href=""><div class="card11"></div></a>
+          <a href=""><div class="card12"></div></a>
+          <a href=""><div class="card13"></div></a>
+          <a href=""><div class="card14"></div></a>
+          <a href=""><div class="card15"></div></a>
+        </div>
+        <div id="result-artist" class="hidden">
+          <div class="grid-container">
+            <div class="artist-card" id="">
+              <div class="card-img">
+                <img id="artist-img" class="artist-img" alt="" />
+              </div>
+              <div class="play">
+                <ion-icon name="play-outline"></ion-icon>
+              </div>
+              <div class="card-text">
+                <a title="Foo Fighters" class="vst" href=""></a>
+                <span class="artist-name" id="artist-name"></span>
+                <span class="artist-categorie">Artista</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -155,5 +176,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

@@ -7,6 +7,16 @@ body {
   font-family: "DM Sans", sans-serif;
   background-color: black;
 }
+::-webkit-scrollbar-track {
+  background-color: #121212; /* Cor da trilha */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3; /* Cor da "thumb" */
+  border-radius: 8px; /* Borda arredondada da "thumb" */
+}
+::-webkit-scrollbar {
+  width: 12px; /* Largura do scrollbar */
+}
 /*Header Style*/
 header {
   width: calc(100% - 315px);
@@ -256,95 +266,215 @@ main {
   font-weight: bold;
   color: white;
 }
-#cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: center;
+/* Section cards*/
+#playlist-artists-container {
   overflow-y: scroll;
   height: 100%;
   width: 100%;
 }
-#cards div {
+#cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+#cards-container div {
   width: 15rem;
   height: 15rem;
 }
-#cards .card1 {
+#cards-container div a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+#cards-container .card1 {
   background-image: url(../assets/playlist/1.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card2 {
+#cards-container .card2 {
   background-image: url(../assets/playlist/2.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card3 {
+#cards-container .card3 {
   background-image: url(../assets/playlist/3.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card4 {
+#cards-container .card4 {
   background-image: url(../assets/playlist/4.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card5 {
+#cards-container .card5 {
   background-image: url(../assets/playlist/5.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card6 {
+#cards-container .card6 {
   background-image: url(../assets/playlist/6.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card7 {
+#cards-container .card7 {
   background-image: url(../assets/playlist/7.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card8 {
+#cards-container .card8 {
   background-image: url(../assets/playlist/8.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card9 {
+#cards-container .card9 {
   background-image: url(../assets/playlist/9.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card10 {
+#cards-container .card10 {
   background-image: url(../assets/playlist/10.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card11 {
+#cards-container .card11 {
   background-image: url(../assets/playlist/11.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card12 {
+#cards-container .card12 {
   background-image: url(../assets/playlist/12.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card13 {
+#cards-container .card13 {
   background-image: url(../assets/playlist/13.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card14 {
+#cards-container .card14 {
   background-image: url(../assets/playlist/14.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-#cards .card15 {
+#cards-container .card15 {
   background-image: url(../assets/playlist/15.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: 300px;
+}
+
+/* Artistas*/
+
+.artist {
+  --column-count: 5;
+  --grid-gap: 24px;
+  --min-container-width: 372px;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+  grid-gap: var(--grid-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+  min-width: var(--min-container-width);
+}
+
+.artist-card {
+  background: #181818;
+  border-radius: 8px;
+  -ms-flex: 1;
+  flex: 1;
+  isolation: isolate;
+  padding: 16px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.artist-card:hover {
+  background-color: #252525;
+}
+
+.card-img {
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.artist-img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: 62px;
+}
+
+.card-text a {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.artist-name {
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 16px;
+  font-weight: 700;
+  padding-block-end: 8px;
+}
+
+.artist-categorie {
+  color: #6a6a6a;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.play {
+  position: relative;
+}
+
+.play .fa-play {
+  position: absolute;
+  right: 10px;
+  top: 120px;
+  padding: 18px;
+  background-color: #1db954;
+  border-radius: 100%;
+  font-size: 14px;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.artist-card:hover .play .fa-play {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.play .fa-play:hover {
+  padding: 20px;
+  cursor: pointer;
+}
+
+#result-artist {
+  padding: 20px 40px;
 }
 /*Estilo Footer da pagina*/
 
