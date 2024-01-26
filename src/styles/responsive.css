@@ -1,0 +1,19 @@
+@media (max-width: 1048px) {
+  #header-search {
+    width: 50%;
+  }
+}
+@media (max-width: 942px) {
+  #header-search {
+    width: 30%;
+  }
+}
+@media (max-width: 1000px) {
+  #subscribe {
+    font-size: 12px;
+  }
+  #login {
+    width: 80px;
+    height: 48px;
+  }
+}
