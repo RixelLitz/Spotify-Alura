@@ -1,20 +1,4 @@
-/*Responsividade sidebar*/
-@media (max-width: 826px) {
-  #hamburguer {
-    display: block;
-  }
-  #hamburguer.active span:nth-child(2) {
-    opacity: 0;
-  }
-  #hamburguer.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  #hamburguer.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-
-/*Responsividade geral*/
+/*Responsividade header*/
 @media (max-width: 1048px) {
   #header-search {
     width: 50%;
@@ -34,6 +18,22 @@
     height: 48px;
   }
 }
+@media (max-width: 826px) {
+  #hamburguer {
+    display: block;
+  }
+  #hamburguer.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburguer.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #hamburguer.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/*Responsividade sidebar*/
 @media (max-width: 826px) {
   body{
     background-color: #121212;
@@ -73,6 +73,7 @@
     display: none;
   }
 }
+/*Responsividade scroll*/
 @media (max-height: 756px) {
   #sidebar.active{
     overflow-y: scroll;
@@ -86,5 +87,21 @@
 }
 ::-webkit-scrollbar {
   width: 0px; 
+}
+}
+/*Responsividade cards*/
+@media (max-width: 561px){
+  #cards-container div{
+  width: 10rem;
+  height: 10rem;
+}
+footer{
+  display: none;
+}
+}
+@media (max-width: 401px){
+  #cards-container div{
+  width: 8rem;
+  height: 8rem;
 }
 }
