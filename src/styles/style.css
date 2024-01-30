@@ -273,6 +273,10 @@ main {
   font-weight: bold;
   color: white;
 }
+#welcome-main p{
+  color: white;
+  margin-left: 30px;
+}
 #welcome-main h2 {
   margin: 30px;
   font-size: 30px;

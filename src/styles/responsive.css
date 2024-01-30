@@ -32,10 +32,29 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+@media (max-width: 402px) {
+  #login {
+    width: 100px;
+    height: 30px;
+  }
+  #subscribe {
+    margin-left: 15px;
+  }
+  #header-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 342px) {
+  #header-search img {
+    display: none;
+  }
+}
 
 /*Responsividade sidebar*/
 @media (max-width: 826px) {
-  body{
+  body {
     background-color: #121212;
   }
   #sidebar {
@@ -52,56 +71,71 @@
   #header-container {
     background-color: black;
   }
-  #header-arrows{
+  #header-arrows {
     display: none;
   }
-    #sidebar.active {
+  #sidebar.active {
     display: block;
     margin-top: 70px;
     border-radius: 0px;
   }
-  #sidebar__navigation{
+  #sidebar__navigation {
     border-radius: 0px;
     background-color: black;
   }
-  #library{
+  #library {
     margin-top: 0;
     border-radius: 0px;
     background-color: black;
   }
-  #library #cookies{
+  #library #cookies {
     display: none;
   }
 }
+@media (max-width: 826px) {
+  #sidebar {
+    width: 250px;
+  }
+}
+@media (max-height: 873px) {
+    #cookies{
+      margin: 10px 20px;
+    }
+}
+@media (max-height: 860px) {
+    #sidebar{
+      overflow-y: scroll;
+    }
+}
 /*Responsividade scroll*/
 @media (max-height: 756px) {
-  #sidebar.active{
+  #sidebar.active {
     overflow-y: scroll;
   }
   ::-webkit-scrollbar-track {
-  background-color: #121212;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #b3b3b3; 
-  border-radius: 8px; 
-}
-::-webkit-scrollbar {
-  width: 0px; 
-}
+    background-color: #121212;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 /*Responsividade cards*/
-@media (max-width: 561px){
-  #cards-container div{
-  width: 10rem;
-  height: 10rem;
+@media (max-width: 561px) {
+  #cards-container div {
+    width: 10rem;
+    height: 10rem;
+  }
+  footer {
+    display: none;
+  }
 }
-footer{
-  display: none;
-}
-}
-@media (max-width: 401px){
-  #cards-container div{
-  width: 8rem;
-  height: 8rem;
-}
+@media (max-width: 401px) {
+  #cards-container div {
+    width: 8rem;
+    height: 8rem;
+  }
 }
