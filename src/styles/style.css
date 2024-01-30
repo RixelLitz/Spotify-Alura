@@ -300,6 +300,7 @@ main {
 #cards-container div {
   width: 15rem;
   height: 15rem;
+  border-radius: 8px;
 }
 #cards-container div a {
   width: 100%;
