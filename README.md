@@ -5,7 +5,7 @@ Uma recriação do Spotify visando aperfeiçoar meus conhecimentos.<br/>
 <br>
 
 <p align="center">
-  <img alt="projeto login-page" src=".github/preview.png" width="100%">
+  <img alt="projeto spotify" src=".github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
