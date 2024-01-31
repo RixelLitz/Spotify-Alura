@@ -1,4 +1,4 @@
-<h1 align="center"> Ayla Bot </h1>
+<h1 align="center"> Spotify </h1>
 
 <p align="center">
 Uma recriação do Spotify visando aperfeiçoar meus conhecimentos.<br/>
