@@ -2,28 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 body {
-  font-family: "DM Sans", sans-serif;
   background-color: black;
+  font-family: "DM Sans", sans-serif;
 }
 ::-webkit-scrollbar-track {
-  background-color: #121212; /* Cor da trilha */
+  background-color: transparent; /* Cor da trilha */
 }
 ::-webkit-scrollbar-thumb {
+  display: none;
   background-color: #b3b3b3; /* Cor da "thumb" */
   border-radius: 8px; /* Borda arredondada da "thumb" */
 }
 ::-webkit-scrollbar {
-  width: 12px; /* Largura do scrollbar */
+  width: 0px; /* Largura do scrollbar */
 }
 /*Header Style*/
 header {
-  width: calc(100% - 315px);
-  margin-left: 300px;
+  width: calc(100vw - 315px);
+  margin-left: 310px;
   overflow-x: hidden;
 }
-#header-container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,71 +34,47 @@ header {
   border-radius: 8px;
   background-color: #121212;
 }
-#header-arrows {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-#arrow-left {
-  margin-right: 1.25rem;
-}
-.arrow-left,
-.arrow-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: black;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#header-search {
+.header-search {
   display: flex;
   align-items: center;
   gap: 20px;
   width: 364px;
   height: 48px;
-  margin-left: 8px;
+  border-radius: 25px;
   background-color: #242424;
-  border-radius: 500px;
-  border: 1px solid transparent;
 }
-#header-search img {
-  width: 16px;
-  height: 16px;
-  margin-left: 10px;
-}
-#header-search input {
-  background: transparent;
+.header-search input {
+  background-color: transparent;
   border: none;
-  padding: 0 100px 0 12;
-  color: #fff;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
   outline: none;
+  white-space: nowrap;
+  color: white;
 }
-
-#subscribe {
-  color: #a7a7a7;
-  font-size: 16px;
-  font-weight: 700;
+.header-search img {
+  width: 16px;
+  margin-left: 10px;
+}
+.header-btn {
+  display: flex;
+  gap: 30px;
+}
+.subscribe {
   background-color: transparent;
-  margin-right: 32px;
   border: none;
-  cursor: pointer;
 }
-#login {
-  width: 100px;
-  height: 48px;
-  color: #000;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 40px;
+.subscribe a {
+  transition: 1s;
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: bold;
+}
+.login {
+  transition: 1s;
+  padding: 15px 50px;
+  border-radius: 25px;
   border: none;
-  cursor: pointer;
 }
 #hamburguer {
   display: none;
@@ -111,180 +89,146 @@ header {
   background-color: white;
   transition: all 0.3s ease-in-out;
 }
-/*Estilo sidebar*/
-
+/* Estilização do sidebar */
 #sidebar {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   padding: 10px 10px;
-  width: 300px;
+  width: 319px;
+  height: 100vh;
 }
-
-#sidebar__navigation {
+.sidebar-navigation {
   background-color: #121212;
-  border-radius: 8px;
+  width: 300px;
   padding: 16px 0 0 16px;
+  border-radius: 8px;
 }
-#logo-spotify img {
+.spotify-logo img {
   width: 80px;
 }
-#sidebar__navigation ul {
-  margin-top: 20px;
-  padding: 0 30px 10px 20px;
-}
-#sidebar__navigation ul li {
-  padding: 15px 0;
-}
-#sidebar__navigation ul li a {
-  display: flex;
-  text-align: center;
-  gap: 10px;
-  color: #b3b3b3;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-}
-#library {
-  background-color: #121212;
-  border-radius: 8px;
+.sidebar-navigation ul {
   display: flex;
   flex-direction: column;
-  padding: 4px 8px;
-  color: #b3b3b3;
-  font-weight: 600;
-  font-size: 14px;
-  margin-top: 10px;
-  height: 100%;
+  list-style: none;
 }
-#library__content {
+.sidebar-navigation li a {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+  font-size: 16px;
+  padding: 15px 0;
+  color: #b3b3b3;
+  font-weight: bold;
+}
+.library {
+  background-color: #121212;
+  margin-top: 15px;
+  border-radius: 8px;
+  height: 100%;
+  padding: 0 10px;
+}
+.library-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 10px;
+  align-items: center;
 }
-#library__btn {
-  color: #b3b3b3;
+.library-content button {
   background-color: transparent;
   border: none;
-  font-weight: 700;
 }
-#library__btn a {
+.library-content button a {
   display: flex;
-  color: #b3b3b3;
-  text-decoration: none;
   gap: 10px;
+  font-weight: bold;
+  color: #b3b3b3;
   font-size: 20px;
 }
-#plus {
-  font-size: 10px;
-}
-#plus a {
+.plus a {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 25px;
   color: #b3b3b3;
 }
-#section__playlist {
-  margin: 8px 0px;
-  padding: 16px 20px;
-  background-color: rgb(49, 49, 49);
-  border-radius: 8px;
-}
-#section-playlist__content {
+.playlist-container {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  background-color: #242424;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
-
-#section-playlist__content .text {
-  padding-bottom: 14px;
+.playlist-texts {
   color: white;
 }
-#section-playlist__content .title {
-  font-weight: 700;
+.playlist-texts h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-#section-playlist__content .subtitle {
-  font-weight: 500;
-  font-size: 12px;
-}
-#playlist__btn {
-  background-color: white;
+.playlist-container button {
+  width: 130px;
+  padding: 10px 5px;
   border-radius: 20px;
   border: none;
-  padding: 10px;
-  width: 113px;
-  margin-top: 12px;
 }
-#playlist__btn a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 700;
+.playlist-container button a {
+  color: black;
 }
-#cookies {
-  margin: 25px 20px;
-}
-#cookies a {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 8px;
-  text-decoration: none;
+.cookies ul li a {
   color: #b3b3b3;
-  font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
+  padding: 0 15px;
 }
-#languages__btn {
+.language-btn {
   background-color: transparent;
   border: 1px solid #878787;
-  cursor: pointer;
-  align-items: center;
-  width: 170px;
-  margin: 8px;
-  padding: 8px;
   border-radius: 20px;
+  padding: 10px 5px;
+  margin-left: 12px;
+  margin-top: 20px;
 }
-#languages__btn a {
+.language-btn a {
   display: flex;
   text-align: center;
   gap: 10px;
   color: white;
+  padding: 5px;
   font-weight: bold;
-  text-decoration: none;
 }
-/*Estilo Main*/
+/*Main Style*/
 main {
   background-color: #121212;
   height: calc(100vh - 116px);
-  width: calc(100vw - 332px);
-  margin-left: 310px;
-  margin-right: 56px;
+  width: calc(100vw - 335px);
+  margin-left: 320px;
   border-radius: 8px;
   overflow-y: hidden;
 }
-#welcome-main {
+
+.welcome-main {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
-#welcome-main h1 {
+.welcome-main h1 {
   margin: 30px;
   font-size: 40px;
   font-weight: bold;
   color: white;
 }
-#welcome-main p{
-  color: white;
+.welcome-main p {
   margin-left: 30px;
+  color: white;
 }
-#welcome-main h2 {
+.welcome-main h2 {
   margin: 30px;
   font-size: 30px;
   font-weight: bold;
   color: white;
 }
-/* Section cards*/
-#playlist-artists-container {
+.cards-artists-container {
   overflow-y: scroll;
   height: 100%;
   width: 100%;
@@ -296,16 +240,10 @@ main {
   justify-content: center;
   gap: 50px;
 }
-
 #cards-container div {
   width: 15rem;
   height: 15rem;
   border-radius: 8px;
-}
-#cards-container div a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
 }
 #cards-container .card1 {
   background-image: url(../assets/playlist/1.jpeg);
@@ -383,35 +321,20 @@ main {
   background-size: contain;
   margin-bottom: 350px;
 }
-
-/* Artistas*/
-
-.artist {
-  --column-count: 5;
-  --grid-gap: 24px;
-  --min-container-width: 372px;
+.artists-container {
+  width: 200px;
 }
 
 .hidden {
   display: none;
 }
 
-.grid-container {
-  grid-gap: var(--grid-gap);
-  display: grid;
-  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
-  min-width: var(--min-container-width);
-}
-
 .artist-card {
   background: #181818;
   border-radius: 8px;
-  -ms-flex: 1;
-  flex: 1;
-  isolation: isolate;
   padding: 16px;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
   width: 100%;
 }
 
@@ -494,37 +417,33 @@ main {
 #result-artist {
   padding: 20px 40px;
 }
-/*Estilo Footer da pagina*/
 
+/*Footer style*/
 footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
+  justify-content: space-between;
   bottom: 0;
+  padding: 0 10px;
   width: 100%;
   height: 80px;
+  border-radius: 10px;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 footer h1 {
+  font-size: 20px;
   color: white;
-  font-weight: bold;
-  margin: 8px;
 }
 footer p {
   color: white;
-  margin: 8px;
 }
 footer button {
-  display: flex;
-  align-items: center;
   border: none;
   padding: 15px 15px;
   border-radius: 20px;
-  margin-right: 50px;
 }
 footer button a {
-  text-decoration: none;
-  color: #000;
+  color: black;
   font-weight: bold;
 }

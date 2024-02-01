@@ -3,133 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="src/assets/images/favicon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="src/styles/reset.css" />
-    <link rel="stylesheet" href="src/styles/style.css" />
     <link rel="stylesheet" href="src/styles/responsive.css" />
-    <title>Spotify| Imersão alura</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <title>Spotify | Imersão Alura</title>
   </head>
   <body>
     <header>
-      <nav id="header-container">
+      <nav class="header-container">
         <div id="hamburguer">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div id="header-arrows">
-          <img
-            class="arrow-left"
-            src="src/assets/images/small-left.png"
-            alt="Seta esquerda"
-          />
-          <img
-            class="arrow-right"
-            src="src/assets/images/small-right.png"
-            alt="Seta direita"
-          />
+        <div class="header-arrows">
+          <a href=""
+            ><img
+              src="src/assets/images/small-left.png"
+              alt="Navegar para a esquerda"
+          /></a>
+          <a href=""
+            ><img
+              src="src/assets/images/small-right.png"
+              alt="Navegar para a direita"
+          /></a>
         </div>
-        <div id="header-search">
+        <div class="header-search">
           <img src="src/assets/images/search.png" alt="" />
           <input
             type="text"
-            name=""
             id="search-input"
-            placeholder="O que voce quer ouvir?"
-            maxlength="800"
+            placeholder="O que você quer ouvir?"
+            maxlength="100"
           />
         </div>
-        <div id="header-btn">
-          <button id="subscribe">Inscreva-se</button>
-          <button id="login">Entrar</button>
+        <div class="header-btn">
+          <button class="subscribe">
+            <a href="">Inscreva-se</a>
+          </button>
+          <button class="login">
+            <a href="">Entrar</a>
+          </button>
         </div>
       </nav>
     </header>
     <div id="sidebar">
-      <nav id="sidebar__navigation">
-        <div id="logo-spotify">
+      <!-- Caixa de toda a SIDEBAR -->
+      <nav class="sidebar-navigation">
+        <!-- Caixa 1 (home e buscar) -->
+        <div class="spotify-logo">
+          <!-- Caixa da logo-->
           <a href=""
-            ><img
-              id="logo-spotify"
-              src="src/assets/images/logo-spotify.png"
-              alt="Spotify Logo"
-          /></a>
+            ><img src="src/assets/images/logo-spotify.png" alt="logo spotify" />
+          </a>
         </div>
         <ul>
+          <!-- Caixa da navegação buscar e home -->
           <li>
-            <a href=""><ion-icon name="home-outline"></ion-icon>Início</a>
+            <!-- Caixa do botao home -->
+            <a href=""><ion-icon name="home-outline"></ion-icon>Inicio</a>
           </li>
           <li>
+            <!-- Caixa do botao Buscar -->
             <a href=""><ion-icon name="search-outline"></ion-icon>Buscar</a>
           </li>
         </ul>
       </nav>
-      <div id="library">
-        <div id="library__content">
-          <button id="library__btn">
+      <div class="library">
+        <div class="library-content">
+          <button>
             <a href=""
-              ><ion-icon name="library-outline"></ion-icon>Sua biblioteca</a
+              ><ion-icon name="library-outline"></ion-icon>Sua Biblioteca</a
             >
           </button>
-          <span id="plus"
-            ><a href=""><ion-icon name="add-circle-outline"></ion-icon></a
-          ></span>
+          <span class="plus"
+            ><a href=""><ion-icon name="add-circle-outline"></ion-icon></a>
+          </span>
         </div>
-        <section id="section__playlist">
-          <div id="section-playlist__content">
-            <span class="text title">Crie sua primeira Playlist</span>
-            <span class="text subtitle">É fácil, vamos te ajudar</span>
-            <button id="playlist__btn">
-              <a href="">Criar Playlist</a>
-            </button>
+        <div class="container-playlist">
+          <div class="playlist-container">
+            <div class="playlist-texts">
+              <h1>Crie sua primeira Playlist</h1>
+              <p>É fácil, vamos te ajudar</p>
+            </div>
+            <button><a href="">Crie sua playlist</a></button>
           </div>
-        </section>
-        <section id="section__playlist">
-          <div id="section-playlist__content">
-            <span class="text title">Que tal seguir um Podcast novo?</span>
-            <span class="text subtitle"
-              >Avisaremos você sobre novos episodios</span
-            >
-            <button id="playlist__btn">
-              <a href="">Explore podcasts</a>
-            </button>
+          <div class="playlist-container">
+            <div class="playlist-texts">
+              <h1>Que tal seguir um Podcast novo?</h1>
+              <p>Avisaremos você sobre novos episódios</p>
+            </div>
+            <button><a href="">Explore podcasts</a></button>
           </div>
-        </section>
-        <div id="cookies">
-          <a href="">Legal</a>
-          <a href="">Centro de privacidade</a>
-          <a href="">Politica de privacidade</a>
-          <a href="">Cookies</a>
-          <a href="">Sobre anuncios</a>
-          <a href="">Acessibilidade</a>
-          <a href="">Notice at collection</a>
-          <a href="">Your privacy choices</a>
         </div>
-        <div id="languages">
-          <button id="languages__btn">
-            <a href=""
-              ><ion-icon name="earth-outline"></ion-icon>Português do Brasil</a
-            >
-          </button>
+        <div class="cookies">
+          <ul>
+            <li><a href="">Legal</a></li>
+            <li><a href="">Centro de privacidade</a></li>
+            <li><a href="">Cookies</a></li>
+            <li><a href="">Sobre anuncios</a></li>
+            <li><a href="">Acessibilidade</a></li>
+            <li><a href="">Notice at collection</a></li>
+            <li><a href="">Your privacy choices</a></li>
+          </ul>
         </div>
+        <button class="language-btn">
+          <a href=""
+            ><ion-icon name="earth-outline"></ion-icon>Português do Brasil</a
+          >
+        </button>
       </div>
     </div>
     <main>
-      <div id="welcome-main">
+      <div class="welcome-main">
         <h1 id="greetings"></h1>
         <p id="date"></p>
         <p id="hour"></p>
         <h2>Navegar por todas seções</h2>
       </div>
-      <section id="playlist-artists-container">
+      <section class="cards-artists-container">
         <div id="cards-container">
-          <a href="https://www.youtube.com" target="_blank"
-            ><div class="card1"></div
-          ></a>
+          <a href=""><div class="card1"></div></a>
           <a href=""><div class="card2"></div></a>
           <a href=""><div class="card3"></div></a>
           <a href=""><div class="card4"></div></a>
@@ -145,8 +138,9 @@
           <a href=""><div class="card14"></div></a>
           <a href=""><div class="card15"></div></a>
         </div>
+
         <div id="result-artist" class="hidden">
-          <div class="grid-container">
+          <div class="artists-container">
             <div class="artist-card" id="">
               <div class="card-img">
                 <img id="artist-img" class="artist-img" alt="" />
@@ -156,8 +150,8 @@
               </div>
               <div class="card-text">
                 <a title="Foo Fighters" class="vst" href=""></a>
-                <span class="artist-name" id="artist-name"></span>
-                <span class="artist-categorie">Artista</span>
+                <h1 class="artist-name" id="artist-name"></h1>
+                <h2 class="artist-categorie">Artista</h2>
               </div>
             </div>
           </div>
@@ -165,15 +159,19 @@
       </section>
     </main>
     <footer>
-      <div id="texts">
+      <div class="texts-footer">
         <h1>Testar o Premium de graça</h1>
         <p>
           Inscreva-se para curtir música ilimitada e podcasts só com alguns
           anúncios. Não precisa de cartão de crédito.
         </p>
       </div>
-      <button><a href="">Inscreva-se grátis</a></button>
+      <button>
+        <a href="">Inscreva-se Grátis</a>
+      </button>
     </footer>
+    <script src="src/scripts/responsive.js"></script>
+    <script src="src/scripts/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -182,7 +180,5 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="src/scripts/responsive.js"></script>
-    <script type="text/javascript" src="src/scripts/script.js"></script>
   </body>
 </html>

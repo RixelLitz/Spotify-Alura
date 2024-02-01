@@ -1,141 +1,125 @@
-/*Responsividade header*/
-@media (max-width: 1048px) {
-  #header-search {
-    width: 50%;
-  }
-}
-@media (max-width: 942px) {
-  #header-search {
-    width: 30%;
-  }
-}
-@media (max-width: 1000px) {
-  #subscribe {
-    font-size: 12px;
-  }
-  #login {
-    width: 80px;
-    height: 48px;
-  }
-}
-@media (max-width: 826px) {
-  #hamburguer {
-    display: block;
-  }
-  #hamburguer.active span:nth-child(2) {
-    opacity: 0;
-  }
-  #hamburguer.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  #hamburguer.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-@media (max-width: 402px) {
-  #login {
-    width: 100px;
-    height: 30px;
-  }
-  #subscribe {
-    margin-left: 15px;
-  }
-  #header-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-@media (max-width: 342px) {
-  #header-search img {
-    display: none;
-  }
-}
+/*Telas com 1033 de largura*/
 
-/*Responsividade sidebar*/
-@media (max-width: 826px) {
-  body {
-    background-color: #121212;
-  }
+@media (max-width: 1033px) {
   #sidebar {
     display: none;
   }
-  main {
+  body .header-search{
+    margin-left: 10px;
+  }
+  body main {
+    margin-left: 10px;
     width: calc(100vw - 20px);
-    margin-left: 11px;
   }
-  header {
-    margin-left: 0;
+  body header {
     width: 100%;
+    margin-left: 0;
   }
-  #header-container {
-    background-color: black;
-  }
-  #header-arrows {
+  .header-arrows {
     display: none;
+  }
+  body #hamburguer {
+    display: block;
+  }
+  body #hamburguer.active span:nth-child(2) {
+    opacity: 0;
+  }
+  body #hamburguer.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  body #hamburguer.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
   #sidebar.active {
     display: block;
     margin-top: 70px;
     border-radius: 0px;
-  }
-  #sidebar__navigation {
-    border-radius: 0px;
-    background-color: black;
-  }
-  #library {
-    margin-top: 0;
-    border-radius: 0px;
-    background-color: black;
-  }
-  #library #cookies {
-    display: none;
-  }
-}
-@media (max-width: 826px) {
-  #sidebar {
-    width: 250px;
-  }
-}
-@media (max-height: 873px) {
-    #cookies{
-      margin: 10px 20px;
-    }
-}
-@media (max-height: 860px) {
-    #sidebar{
-      overflow-y: scroll;
-    }
-}
-/*Responsividade scroll*/
-@media (max-height: 756px) {
-  #sidebar.active {
     overflow-y: scroll;
   }
-  ::-webkit-scrollbar-track {
-    background-color: #121212;
+  body .library {
+    border-radius: 0;
+    margin-top: 0;
   }
-  ::-webkit-scrollbar-thumb {
-    background-color: #b3b3b3;
-    border-radius: 8px;
-  }
-  ::-webkit-scrollbar {
-    width: 0px;
+  body .cookies ul {
+    list-style: none;
   }
 }
-/*Responsividade cards*/
-@media (max-width: 561px) {
-  #cards-container div {
-    width: 10rem;
-    height: 10rem;
+/*Telas com 860 de largura*/
+
+@media (max-width: 860px) {
+  body #cards-container div {
+    height: 12rem;
+    width: 12rem;
   }
-  footer {
+}
+/*Telas com 524 de largura*/
+@media (max-width: 524px) {
+  body #cards-container div {
+    height: 8rem;
+    width: 8rem;
+  }
+  body .login {
+    padding: 15px 25px;
+  }
+}
+/*Telas com 515 de largura*/
+@media (max-width: 515px) {
+  body #cards-container div {
+    height: 6rem;
+    width: 6rem;
+  }
+  body .login {
+    padding: 10px 20px;
+  }
+  body .subscribe a {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+  body .header-search {
+    width: 30%;
+  }
+  body footer {
     display: none;
   }
 }
-@media (max-width: 401px) {
-  #cards-container div {
-    width: 8rem;
-    height: 8rem;
+/*Telas com 420 de largura*/
+@media (max-width: 420px) {
+  body #cards-container div {
+    height: 5rem;
+    width: 5rem;
+  }
+  body .login {
+    padding: 8px 10px;
+  }
+}
+/*Telas com 281 de largura*/
+
+@media (max-width: 281px) {
+  body #cards-container div {
+    height: 5rem;
+    width: 5rem;
+  }
+  body .login{
+    padding: 3px 5px;
+  }
+  body .header-search{
+    margin-left: 10px;
+  }
+  body #sidebar{
+    width: 280px;
+  }
+}
+/*Telas com 856 de altura*/
+
+@media (max-height: 856px) {
+  body #sidebar {
+      overflow-y: scroll;
+  }
+}
+/*Telas com 709 de altura*/
+@media (max-height: 709px) {
+  body .container-playlist {
+      height: 30%;
+      overflow-y: scroll;
   }
 }
