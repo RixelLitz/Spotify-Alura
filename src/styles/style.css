@@ -270,6 +270,7 @@ main {
   transition: 1s;
 }
 #cards-container div:hover {
+  transform: scale(1.13);
   transition: 0.5s;
   box-shadow: 0 0 10px #4bf321, 0 0 40px #4bf321, 0 0 80px #75f321;
 }
