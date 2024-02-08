@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Como um desafio a mim mesmo, resolvi recriar do zero a pagina principal do Spotify
 
-- [Acesse o projeto finalizado, online](https://spotify-alura.vercel.app/)
+- [Acesse o projeto finalizado, online](https://spotify-rb.vercel.app/)
 
 
 
